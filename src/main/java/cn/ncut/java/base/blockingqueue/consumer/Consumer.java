@@ -14,7 +14,7 @@ public class Consumer implements Runnable {
             String consumer = Thread.currentThread().getName();
             System.out.println(consumer);
             String temp = queue.take();//如果队列为空，会阻塞当前线程  
-            System.out.println(consumer + "get a product:" + temp);
+            System.out.println(consumer + " get a product:" + temp);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
