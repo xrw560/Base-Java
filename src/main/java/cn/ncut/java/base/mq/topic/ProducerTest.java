@@ -6,9 +6,6 @@ import java.util.Random;
 
 public class ProducerTest {
 
-    /**
-     * @param args
-     */
     public static void main(String[] args) throws JMSException, Exception {
         ProducerTool producer = new ProducerTool();
         Random random = new Random();
