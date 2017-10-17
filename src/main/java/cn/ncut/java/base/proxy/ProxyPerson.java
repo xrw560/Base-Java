@@ -6,29 +6,29 @@ import java.lang.reflect.Proxy;
 
 public class ProxyPerson {
 
-	public static void main(String[] args) {
-		final MyPerson p = new MyPerson();
-		PersonInterface proxy = (PersonInterface) Proxy.newProxyInstance(MyPerson.class.getClassLoader(), MyPerson.class.getInterfaces(), new InvocationHandler() {
+    public static void main(String[] args) {
+        final MyPerson p = new MyPerson();
+        PersonInterface proxy = (PersonInterface) Proxy.newProxyInstance(MyPerson.class.getClassLoader(),
+                MyPerson.class.getInterfaces(), new InvocationHandler() {
 
-			@Override
-			public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
-				System.out.println("proxy is coming....");
+            public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
+                System.out.println("proxy is coming....");
 
-				if (method.getName() == "saySomeThing") {
-					System.out.println("say some thing is special handled.....");
-					p.saySomeThing();
-				} else {
-					Object invoke = method.invoke(p, args); // 调用任何public方法都拦截
+                if (method.getName() == "saySomeThing") {
+                    System.out.println("say some thing is special handled.....");
+                    p.saySomeThing();
+                } else {
+                    Object invoke = method.invoke(p, args); // 调用任何public方法都拦截
 
-					System.out.println("proxy is leaving....");
+                    System.out.println("proxy is leaving....");
 
-				}
-				return null;
-			}
-		});
-		proxy.doSomeThing();
-		proxy.saySomeThing();
+                }
+                return null;
+            }
+        });
+        proxy.doSomeThing();
+        proxy.saySomeThing();
 
-	}
+    }
 
 }
