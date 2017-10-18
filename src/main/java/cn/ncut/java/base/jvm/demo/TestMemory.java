@@ -3,8 +3,7 @@ package cn.ncut.java.base.jvm.demo;
 import java.util.ArrayList;
 /**
  * 64kb/50毫秒
- * @author wilson
- *
+ * -Xms:100m -Xmx:100m -XX:+UseSerialGC
  */
 public class TestMemory {
 	static class OOMObject {
