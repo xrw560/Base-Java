@@ -5,6 +5,9 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
+/**
+ * 初级设计
+ */
 public class OrderPizza {
 
     public OrderPizza() {
@@ -34,8 +37,7 @@ public class OrderPizza {
 
     private String gettype() {
         try {
-            BufferedReader strin = new BufferedReader(new InputStreamReader(
-                    System.in));
+            BufferedReader strin = new BufferedReader(new InputStreamReader(System.in));
             System.out.println("input pizza type:");
             String str = strin.readLine();
 

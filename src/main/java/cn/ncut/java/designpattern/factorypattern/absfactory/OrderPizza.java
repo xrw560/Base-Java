@@ -10,7 +10,6 @@ public class OrderPizza {
     AbsFactory mFactory;
 
     public OrderPizza(AbsFactory mFactory) {
-
         setFactory(mFactory);
     }
 
@@ -34,8 +33,7 @@ public class OrderPizza {
 
     private String gettype() {
         try {
-            BufferedReader strin = new BufferedReader(new InputStreamReader(
-                    System.in));
+            BufferedReader strin = new BufferedReader(new InputStreamReader(System.in));
             System.out.println("input pizza type:");
             String str = strin.readLine();
             return str;
