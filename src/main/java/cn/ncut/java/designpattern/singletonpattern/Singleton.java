@@ -5,7 +5,6 @@ public class Singleton {
     private static Singleton uniqueInstance = null;
 
     private Singleton() {
-
     }
 
     public static Singleton getInstance() {
@@ -13,7 +12,6 @@ public class Singleton {
             uniqueInstance = new Singleton();
         }
         return uniqueInstance;
-
     }
 
 }

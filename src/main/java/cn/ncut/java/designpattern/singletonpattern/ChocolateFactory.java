@@ -12,7 +12,7 @@ public class ChocolateFactory {
     }
 
     public static ChocolateFactory getInstance() {
-
+        //双重检查加锁
         if (uniqueInstance == null) {
             synchronized (ChocolateFactory.class) {
                 if (uniqueInstance == null) {
@@ -20,9 +20,7 @@ public class ChocolateFactory {
                 }
             }
         }
-
         return uniqueInstance;
-
     }
 
     public void fill() {
