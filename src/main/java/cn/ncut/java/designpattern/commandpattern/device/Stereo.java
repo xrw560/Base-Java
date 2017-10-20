@@ -1,5 +1,8 @@
 package cn.ncut.java.designpattern.commandpattern.device;
 
+/**
+ * 音响
+ */
 public class Stereo {
     static int volume = 0;
 

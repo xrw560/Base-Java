@@ -1,6 +1,5 @@
 package cn.ncut.java.designpattern.commandpattern.command;
 
-
 import cn.ncut.java.designpattern.commandpattern.device.Light;
 
 public class LightOffCommand implements Command {

@@ -1,6 +1,7 @@
 package cn.ncut.java.designpattern.commandpattern.command;
 
 import cn.ncut.java.designpattern.commandpattern.Control;
+
 import java.util.Stack;
 
 public class CommandModeControl implements Control {
