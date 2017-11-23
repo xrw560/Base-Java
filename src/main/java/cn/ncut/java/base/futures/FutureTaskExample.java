@@ -40,6 +40,8 @@ public class FutureTaskExample {
         } catch (TimeoutException e) {
             e.printStackTrace();
             System.out.println("FutureTask2 未获取到结果");
+        }finally {
+            executor.shutdown();
         }
     }
 }
